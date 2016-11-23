@@ -1,0 +1,32 @@
+﻿@model LoginViewModel
+
+@{ 
+    ViewBag.Tilte = "Login";
+}
+
+<h1>Login</h1>
+
+<form method="post" asp-antiforgery="true">
+
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div>
+        <label asp-for="Username" />
+        <input asp-for="Username" />
+    </div>
+
+    <div>
+        <label asp-for="Password" />
+        <input asp-for="Password" />
+    </div>
+
+    <div>
+        <label asp-for="Remember" />
+        <input asp-for="Remember" />
+    </div>
+
+    <div>
+        <input type="submit" value="Login" />
+    </div>
+
+</form>

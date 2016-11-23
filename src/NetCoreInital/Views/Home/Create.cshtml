@@ -1,0 +1,24 @@
+﻿
+@model NetCoreInital.Entities.Restaurant
+
+<div>
+    <h1>Create</h1>
+
+    <div>
+       @using (Html.BeginForm())
+       {
+           <div>
+               @Html.LabelFor(m => m.Name)
+               @Html.TextBoxFor(m => m.Name)
+           </div>
+        <div>
+            @Html.LabelFor(m => m.Cuisine)
+            @Html.DropDownListFor(m => m.Cuisine,Html.GetEnumSelectList(typeof(CuisineType)))
+        </div>
+
+        <input type="submit" value="Save" />
+       }
+    </div>
+
+
+</div>
